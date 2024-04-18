@@ -15,7 +15,7 @@ spec:
           env: stage
   template:      
     metadata:
-      name: '{{name}}-billing-app'
+      name: '{{env}}-billing-app'
     spec:
       # The project the application belongs to.
       project: default
