@@ -13,7 +13,7 @@ spec:
            url: https://10.5.0.184:6443
   template:      
     metadata:
-      name: '{{name}}-billing-app'
+      name: 'billing-app'
     spec:
       # The project the application belongs to.
       project: default
