@@ -5,7 +5,12 @@ metadata:
   namespace: argocd
 spec:
   generators:
-  - clusters: {} # Automatically use all clusters defined within Argo CD
+  - list:
+      elements:
+        - cluster: cluster-2
+          url: https://10.5.0.81:6443
+        - cluster: cluster-3
+          url: https://10.5.0.184:6443
   template:      
     metadata:
       name: '{{name}}-billing-app'
