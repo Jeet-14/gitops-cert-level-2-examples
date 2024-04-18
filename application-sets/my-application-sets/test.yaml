@@ -27,8 +27,8 @@ spec:
         path: ./my-yaml/{{env}}/
       # Destination cluster and namespace to deploy the application
       destination:
-        server: '{{server}}'
-        namespace: billing
+        server: '{{url}}'
+        namespace: default
 
       # Sync policy
       syncPolicy:
