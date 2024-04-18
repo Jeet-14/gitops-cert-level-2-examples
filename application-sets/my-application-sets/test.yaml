@@ -9,8 +9,10 @@ spec:
       elements:
         - cluster: cluster-2
           url: https://10.5.0.81:6443
+          env: dev
         - cluster: cluster-3
           url: https://10.5.0.184:6443
+          env: stage
   template:      
     metadata:
       name: '{{name}}-billing-app'
@@ -22,7 +24,7 @@ spec:
       source:
         repoURL: https://github.com/Jeet-14/k8s-instore.git
         targetRevision: HEAD
-        path: ./my-yaml/{{cluster}}
+        path: ./my-yaml/{{env}}/
       # Destination cluster and namespace to deploy the application
       destination:
         server: '{{server}}'
